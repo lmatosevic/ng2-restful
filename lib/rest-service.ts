@@ -3,15 +3,13 @@ import 'rxjs/add/operator/toPromise';
 
 import {Serializable} from './serializable';
 import {BaseService} from './base-service';
-import {ParameterlessConstructor} from './parameterless-constructor';
 import {GenericResponse} from './generic-response';
 
 export class RestService<T extends Serializable<T>> extends BaseService {
     protected httpService: Http;
     private headers: Headers = new Headers({'Content-Type': 'application/json'});
 
-    constructor(httpService: Http,
-                private ctor: ParameterlessConstructor<T>) {
+    constructor(httpService: Http, private ctor: new() => T) {
         super(httpService);
         this.httpService = httpService;
     }
@@ -26,7 +24,7 @@ export class RestService<T extends Serializable<T>> extends BaseService {
                     return [];
                 }
                 response.json().forEach((resource: string) => {
-                    let model = new this.ctor();
+                    let model: T = new this.ctor();
                     model.deserialize(resource);
                     users.push(model);
                 });

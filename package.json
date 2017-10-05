@@ -2,11 +2,16 @@
   "name": "ng2-restful",
   "version": "1.0.0",
   "description": "Angular 2+ module for connecting with RESTful API.",
-  "main": "index.js",
+  "author": "Luka",
+  "license": "MIT",
+  "main": "ng2-restful.umd.js",
+  "jsnext:main": "ng2-restful.esm.js",
+  "module": "ng2-restful.esm.js",
+  "types": "ng2-restful.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"No test specified\" && exit 1",
     "copy": "node tools/copy-package.js && node tools/cleanup-package.js",
-    "bundle": "rimraf dist && rollup -c rollup.config.umd.js && rollup -c rollup.config.esm.js && tsc",
+    "bundle": "rimraf dist && rollup -c rollup.config.umd.js && rollup -c rollup.config.esm.js && tsc && ngc",
     "postbundle": "node tools/remove-code.js",
     "build": "npm run bundle && npm run copy"
   },
@@ -19,18 +24,13 @@
     "angular2",
     "rest"
   ],
-  "author": "Luka",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Lujo5/ng2-restful/issues"
-  },
-  "homepage": "https://github.com/Lujo5/ng2-restful#readme",
   "dependencies": {
     "@angular/core": "^4.4.4",
     "@angular/http": "^4.4.4",
     "rxjs": "^5.4.3"
   },
   "devDependencies": {
+    "@angular/compiler": "^4.4.4",
     "@angular/compiler-cli": "^4.4.4",
     "@types/core-js": "^0.9.43",
     "@types/node": "~6.0.60",
@@ -41,5 +41,9 @@
     "rollup-plugin-node-resolve": "^3.0.0",
     "rollup-plugin-typescript": "^0.8.1",
     "typescript": "~2.3.0"
+  },
+  "homepage": "https://github.com/Lujo5/ng2-restful#readme",
+  "bugs": {
+    "url": "https://github.com/Lujo5/ng2-restful/issues"
   }
 }
