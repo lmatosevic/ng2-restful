@@ -1,7 +1,7 @@
-import {Http, Response, RequestOptions, URLSearchParams} from '@angular/http';
-import {GenericResponse} from './generic-response';
-
+import {Http, RequestOptions, Response, URLSearchParams} from '@angular/http';
 import 'rxjs/add/operator/toPromise';
+
+import {GenericResponse} from './generic-response';
 
 export class BaseService {
     protected httpService: Http;

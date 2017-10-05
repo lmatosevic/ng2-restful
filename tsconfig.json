@@ -14,6 +14,6 @@
     ]
   },
   "files": [
-    "./lib/restful.ts"
+    "./lib/ng2-restful.ts"
   ]
 }
