@@ -156,7 +156,7 @@ export class ArticleComponent implements OnInit {
             this.articles = articles;
         });
         
-        // Query articles with get parameters
+        // Query articles with URL parameters
         this.articleService.query({typeId: 3, page: 1, limit: 10}).then((articles: Article[]) => {
             this.articles = articles;
         });
