@@ -129,7 +129,7 @@ export class GenericResponse implements Serializable<GenericResponse> {
 ```
 
 ### Interacting with API
-To use your newly created and implemneted service, just inject service into the angular2 @Component's constructor 
+To use your newly created and implemented service, just inject service into the angular2 @Component's constructor 
 and use it as follows:
 ``` javascript
 import {Component, OnInit} from "@angular/core";
@@ -169,7 +169,7 @@ export class ArticleComponent implements OnInit {
         // Create new article with provided article model object
         this.articleService.createOne(this.newArticle).then((response: GenericResponse) => {
             if (repsonse.success) {
-                console.log("Article created! Descritpion: " + response.description);
+                console.log("Article created! Description: " + response.description);
             } else {
                 console.log("Failed creating article");
             }
@@ -178,7 +178,7 @@ export class ArticleComponent implements OnInit {
         // Update one article with provided article model object which must have id
         this.articleService.updateOne(this.article).then((response: GenericResponse) => {
             if (repsonse.success) {
-                console.log("Article updated! Descritpion: " + response.description);
+                console.log("Article updated! Description: " + response.description);
             } else {
                 console.log("Failed updating article");
             }
@@ -187,7 +187,7 @@ export class ArticleComponent implements OnInit {
         // Delete one article with provided id
         this.articleService.deleteOne(this.article.id).then((response: GenericResponse) => {
             if (repsonse.success) {
-                console.log("Article deleted! Descritpion: " + response.description);
+                console.log("Article deleted! Description: " + response.description);
             } else {
                 console.log("Failed deleting article");
             }
@@ -196,7 +196,7 @@ export class ArticleComponent implements OnInit {
         // Custom service request
         this.articleService.nonRESTfulRequest(this.article.id).then((response: GenericResponse) => {
             if (repsonse.success) {
-                console.log("Request successful! Descritpion: " + response.description);
+                console.log("Request successful! Description: " + response.description);
                 console.log("Returned someValue: " + response.data.get('someValue')):
             } else {
                 console.log("Request failed");
