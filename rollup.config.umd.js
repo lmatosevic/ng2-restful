@@ -7,12 +7,14 @@ var sass = require('node-sass');
 import {nameLibrary, PATH_SRC, PATH_DIST, EXTERNAL_LIBS} from './config-library.js';
 
 export default {
-    entry: PATH_SRC + nameLibrary + '.ts',
-    format: 'umd',
-    moduleName: nameLibrary,
-    sourceMap: true,
+    input: PATH_SRC + nameLibrary + '.ts',
+    name: nameLibrary,
+    sourcemap: true,
     external: EXTERNAL_LIBS,
-    dest: PATH_DIST + nameLibrary + ".umd.js",
+    output: {
+        format: 'umd',
+        file: PATH_DIST + nameLibrary + ".umd.js"
+    },
     plugins: [
         angular(
             {
