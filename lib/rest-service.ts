@@ -5,7 +5,7 @@ import {Serializable} from './serializable';
 import {BaseService} from './base-service';
 import {GenericResponse} from './generic-response';
 
-export class RestService<T extends Serializable<T>> extends BaseService {
+export abstract class RestService<T extends Serializable<T>> extends BaseService {
     protected httpService: Http;
     private headers: Headers = new Headers({'Content-Type': 'application/json'});
 
@@ -75,7 +75,5 @@ export class RestService<T extends Serializable<T>> extends BaseService {
             .catch(this.handleError);
     }
 
-    getBaseUrlPath(): string {
-        return '';
-    };
+    abstract getBaseUrlPath(): string;
 }
