@@ -10,9 +10,9 @@ npm install ng2-restful --save
 
 ## Usage
 This library **does not** contains an Angular2 module with exported components and service, but instead, provides two classes and one interface:
-* **RestService< T extends Serializable< T > >** - an abstract class which your services need to extend in order to use provided REST methods
+* **RestService\<T extends Serializable<T>>** - an abstract class which your services need to extend in order to use provided REST methods
 * **GenericResponse** - model class returned from custom GET and POST requests performed from RestService
-* **Serializable< T >** - interface which your model classes need to implement in order to be automatically serialized/deserialized when sent/received from REST API
+* **Serializable\<T>** - interface which your model classes need to implement in order to be automatically serialized/deserialized when sent/received from REST API
 
 Using this RESTful pattern classes allows you to follow best practices for transferring and mapping entity objects from server to your client application. 
 And also, provides a level of consistency to your Angular2 application.
@@ -209,15 +209,15 @@ export class ArticleComponent implements OnInit {
 
 Complete overview of all available methods provided by RestService:
 
-| Service method  | Arguments                                               | HTTP method  | Return type                |
-|:----------------|:--------------------------------------------------------|:------------:|:---------------------------|
-| get             | parameters: any, path: string, *options: RequestOptions | GET          | Promise< GenericResponse > |
-| post            | body: any, path: string, *options: RequestOptions       | POST         | Promise< GenericResponse > |
-| query           | parameters: any, *path: string                          | GET          | Promise< T[] >             |
-| getOne          | id: number, *path: string                               | GET          | Promise< T >               |
-| createOne       | model: T, *path: string                                 | POST         | Promise< GenericResponse > |
-| updateOne       | model: T, *path: string                                 | PUT          | Promise< GenericResponse > |
-| deleteOne       | id: number, *path: string                               | DELETE       | Promise< GenericResponse > |
+| Service method  | Arguments                                               | HTTP method  | Return type              |
+|:----------------|:--------------------------------------------------------|:------------:|:-------------------------|
+| get             | parameters: any, path: string, *options: RequestOptions | GET          | Promise\<GenericResponse> |
+| post            | body: any, path: string, *options: RequestOptions       | POST         | Promise\<GenericResponse> |
+| query           | parameters: any, *path: string                          | GET          | Promise\<T[]>             |
+| getOne          | id: number, *path: string                               | GET          | Promise\<T>               |
+| createOne       | model: T, *path: string                                 | POST         | Promise\<GenericResponse> |
+| updateOne       | model: T, *path: string                                 | PUT          | Promise\<GenericResponse> |
+| deleteOne       | id: number, *path: string                               | DELETE       | Promise\<GenericResponse> |
 
 _Parameters marked with * are optional._
 
