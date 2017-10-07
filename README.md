@@ -4,7 +4,7 @@
 ## Instalation
 Install library into your project using Node package manager (NPM).
 
-``` sh
+```sh
 npm install ng2-restful --save
 ```
 
