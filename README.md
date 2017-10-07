@@ -69,8 +69,8 @@ import {Injectable} from '@angular/core';
 import {Http} from '@angular/http';
 
 import {RestService} from 'ng2-restful';
-import {Article} from '../models/article.model';
 import {GenericResponse} from 'ng2-restful';
+import {Article} from '../models/article.model';
 
 @Injectable()
 export class ArticleService extends RestService<Article> {
