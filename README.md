@@ -210,7 +210,7 @@ export class ArticleComponent implements OnInit {
 Complete overview of all available methods provided by RestService:
 
 | Service method  | Arguments                                               | HTTP method  | Return type              |
-| ----------------|:-------------------------------------------------------:| ------------:| ------------------------:|
+|:----------------|:--------------------------------------------------------|:------------:|:-------------------------|
 | get             | parameters: any, path: string, *options: RequestOptions | GET          | Promise<GenericResponse> |
 | post            | body: any, path: string, *options: RequestOptions       | POST         | Promise<GenericResponse> |
 | query           | parameters: any, *path: string                          | GET          | Promise<T[]>             |
