@@ -170,6 +170,7 @@ export class ArticleComponent implements OnInit {
         this.articleService.createOne(this.newArticle).then((response: GenericResponse) => {
             if (repsonse.success) {
                 console.log("Article created! Description: " + response.description);
+                console.log("New article id is: " + response.data.get('id');
             } else {
                 console.log("Failed creating article");
             }
