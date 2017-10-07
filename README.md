@@ -218,6 +218,7 @@ Complete overview of all available methods provided by RestService:
 | createOne       | model: T, *path: string                                 | POST         | Promise< GenericResponse > |
 | updateOne       | model: T, *path: string                                 | PUT          | Promise< GenericResponse > |
 | deleteOne       | id: number, *path: string                               | DELETE       | Promise< GenericResponse > |
+
 _Parameters marked with * are optional._
 
 License
