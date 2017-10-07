@@ -10,7 +10,7 @@ npm install ng2-restful --save
 
 ## Usage
 This library **does not** contains an Angular2 module with exported components and service, but instead, provides two classes and one interface:
-* **RestService\<T extends Serializable<T>>** - an abstract class which your services need to extend in order to use provided REST methods
+* **RestService\<T extends Serializable\<T>>** - an abstract class which your services need to extend in order to use provided REST methods
 * **GenericResponse** - model class returned from custom GET and POST requests performed from RestService
 * **Serializable\<T>** - interface which your model classes need to implement in order to be automatically serialized/deserialized when sent/received from REST API
 
