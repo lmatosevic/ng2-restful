@@ -1,6 +1,8 @@
 # ng2-restful
 > Angular 2+ library for connecting with RESTful API.
 
+Minimum required version of @angular/core:>=2.4.3 and @angular/http:>=2.4.3
+
 ## Instalation
 Install library into your project using Node package manager (NPM).
 
