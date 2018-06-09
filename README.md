@@ -85,6 +85,13 @@ export class ArticleService extends RestService<Article> {
     getBaseUrlPath(): string {
         return 'api/articles'; 
     }
+
+    // Here you can override handleError method to perform specific actions when error is catched during HTTP request
+    // duration. You could also forward error here and handle it when using this service in other components.
+    handleError(error: any): Promise<any> {
+        // throw error; If you want to handle error in another catch(..) block
+        return Promise.reject(error.message || error);
+    }
     
     // Optionally, you can perform non-RESTful request using get() or post() methods
     // Returned value is promise of GenericResponse object which is described below.
