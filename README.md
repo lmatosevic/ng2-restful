@@ -1,6 +1,8 @@
 # ng2-restful
 > Angular 2+ library for connecting with RESTful API.
 
+> **`ng2-restful` is deprecated**. Please switch to the [ngx-restful](https://github.com/lmatosevic/ngx-restful)
+
 Minimum required version of @angular/core:>=2.4.3 and @angular/http:>=2.4.3
 
 ## Instalation

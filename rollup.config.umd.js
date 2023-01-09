@@ -13,6 +13,7 @@ export default {
     external: EXTERNAL_LIBS,
     output: {
         format: 'umd',
+        name: 'out',
         file: PATH_DIST + nameLibrary + ".umd.js"
     },
     plugins: [
